@@ -18,9 +18,12 @@
     </style>
 
     <script type="text/javascript">
+        const params = (new URL(document.location)).searchParams;
+        const apiKey = params.get("apiKey") || "b4cc7474-166d-4299-af73-3fd7e55ae41c";
+        
         window.Announcements || function (e, t, a) {
             e.Announcements = {
-                apiKey: "b4cc7474-166d-4299-af73-3fd7e55ae41c", _cs: []
+                apiKey: apiKey, _cs: []
             }, ["start"].forEach(function (t) {
                 e.Announcements[t] = function () {
                     const a = Array.prototype.slice.call(arguments);
