@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Test widget</title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.Announcements || function (e, t, a) {
+            e.Announcements = {
+                apiKey: "b4cc7474-166d-4299-af73-3fd7e55ae41c", _cs: []
+            }, ["start"].forEach(function (t) {
+                e.Announcements[t] = function () {
+                    const a = Array.prototype.slice.call(arguments);
+                    e.Announcements._cs.push({name: t, args: a})
+                }
+            });
+            var r = t.createElement(a);
+            r.src = "https://announcements-cdn.onpro.team/widget.js", r.type = "text/javascript";
+            var n = document.getElementsByTagName(a)[0];
+            n.parentNode.insertBefore(r, n)
+        }(window, document, "script");
+    </script>
+</head>
+<body>
+
+<script>
+    var TestToken = "f5dda31a2709b48df4fa6290d9349f36cd4d45f791006af8cb3edfa99171c6e8";
+    Announcements.start({el: "#NodeId", token: TestToken});
+</script>
+
+<div id="NodeId"></div>
+
+</body>
+</html>
